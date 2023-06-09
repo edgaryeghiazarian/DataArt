@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Alert Button</h2>
+    <button onclick="alertButton()">Show alert</button>
+    <h2>Prompt Button</h2>
+    <button onclick="promptButton()">Show prompt</button>
+    <p id="prompt"></p>
+    <h2>Confirm button</h2>
+    <button onclick="confirmButton()">Show confirm</button>
+    <p id="confirm"></p>
+    <form action="calculator">
+        <label for="first-number">1st Number : </label>
+        <input type="text" id="first-number">
+        <br><br>
+        <label for="second-number">2nd Number: </label>
+        <input type="text" id="second-number">
+        <br><br>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+        <p>The result is:</p>
+        <p id="answer"></p>
+    </form>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
