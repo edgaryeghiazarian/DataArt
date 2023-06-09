@@ -1,0 +1,118 @@
+@use "./base";
+
+@font-face {
+    src: url(../fonts/Dosis-Light.ttf);
+    font-family: "Dosis_light";
+    src: url(../fonts/Exo2-Bold.ttf);
+    font-family: "Exo2";
+}
+
+$nav-text-color: rgba(46, 46, 46, 0.795);
+$medium: 900px;
+$small: 500px;
+
+body {
+    margin: 0;
+    padding: 50px;
+
+    header {
+        color: white;
+        position: relative;
+        text-align: center;
+
+        figure {
+            margin: 0;
+        }
+
+        figcaption {
+            display: flex;
+            flex-direction: column;
+            left: 50%;
+            position: absolute;
+            top: 40%;
+            transform: translate(-50%, -50%);
+            
+            span:first-child {
+                font-size: 100px;
+                font-family: "Dosis_light";
+
+
+                @media screen and (max-width: $medium) {
+                    font-size: 60px;
+                }
+
+                @media screen and (max-width: $small) {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .header-img {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    nav.menu {
+        background-color: white;
+        display: grid;
+        font-family: "Exo2";
+        grid-template-columns: 15fr 1fr 1fr 1fr;
+        padding-bottom: 20px;
+
+        a {
+            color: $nav-text-color;
+            text-decoration: none;
+        }
+    }
+
+    section {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 20px 0px;
+        width: 100%;
+
+        div {
+            padding: 20px 0;
+        }
+
+        div.section-main-text{
+            width: 50%;
+        }
+
+        hr {
+            width: 30px;
+            transform: rotate(90deg);
+        }
+    }
+
+    main.grid-container {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        width: 100%;
+
+        figure {
+            margin: 0;
+            padding: 0;
+
+            img {
+                width: 100%;
+            }
+
+            &:hover {
+                animation: base.$transition 2s linear alternate;
+                z-index: 1;
+            }
+        }
+    }
+
+    footer {
+        text-align: center;
+        width: 100%;
+    }
+}

@@ -1,0 +1,116 @@
+@keyframes transition {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(0.75);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@font-face {
+  src: url(../fonts/Dosis-Light.ttf);
+  font-family: "Dosis_light";
+  src: url(../fonts/Exo2-Bold.ttf);
+  font-family: "Exo2";
+}
+body {
+  margin: 0;
+  padding: 50px;
+}
+body header {
+  color: white;
+  position: relative;
+  text-align: center;
+}
+body header figure {
+  margin: 0;
+}
+body header figcaption {
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+body header figcaption span:first-child {
+  font-size: 100px;
+  font-family: "Dosis_light";
+}
+@media screen and (max-width: 900px) {
+  body header figcaption span:first-child {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 500px) {
+  body header figcaption span:first-child {
+    font-size: 30px;
+  }
+}
+body header .header-img {
+  height: auto;
+  width: 100%;
+}
+body nav.menu {
+  background-color: white;
+  display: grid;
+  font-family: "Exo2";
+  grid-template-columns: 15fr 1fr 1fr 1fr;
+  padding-bottom: 20px;
+}
+body nav.menu a {
+  color: rgba(46, 46, 46, 0.795);
+  text-decoration: none;
+}
+body section {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px 0px;
+  width: 100%;
+}
+body section div {
+  padding: 20px 0;
+}
+body section div.section-main-text {
+  width: 50%;
+}
+body section hr {
+  width: 30px;
+  transform: rotate(90deg);
+}
+body main.grid-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  width: 100%;
+}
+body main.grid-container figure {
+  margin: 0;
+  padding: 0;
+}
+body main.grid-container figure img {
+  width: 100%;
+}
+body main.grid-container figure:hover {
+  animation: transition 2s linear alternate;
+  z-index: 1;
+}
+body footer {
+  text-align: center;
+  width: 100%;
+}
